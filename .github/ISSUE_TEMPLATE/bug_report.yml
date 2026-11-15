@@ -1,0 +1,31 @@
+name: Bug Report
+description: 回報安裝工具、字庫建置或程式錯誤
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: game
+    attributes:
+      label: 受影響的遊戲
+      options:
+        - Batman: Arkham Asylum GOTY (asylum)
+        - Batman: Arkham City GOTY (city)
+        - Batman: Arkham Origins (origins)
+        - Batman: Arkham Knight (knight)
+        - 共用工具 / CLI / BAT
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 系統與 Python 版本
+      placeholder: "例如：Windows 11 23H2 / Python 3.12.10"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟與錯誤訊息
+      description: 請貼上執行的指令與完整錯誤輸出（請勿包含個人隱私路徑或遊戲檔案）。
+    validations:
+      required: true

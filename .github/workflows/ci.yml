@@ -1,0 +1,44 @@
+name: Arkham-TW-Localization CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-qa:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests & M4 QA Linter (Private)
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Package & verify clean Public Repository CI
+        shell: python
+        run: |
+          import os, subprocess, sys, tempfile
+          from pathlib import Path
+          with tempfile.TemporaryDirectory(prefix="arkham_pub_ci_") as td:
+              pub_dir = Path(td) / "Arkham-TW-Localization"
+              subprocess.run([sys.executable, "tools/package_public.py", str(pub_dir)], check=True)
+              env = os.environ.copy()
+              env["ARKHAM_PUBLIC_CI"] = "1"
+              subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"], cwd=str(pub_dir), env=env, check=True)

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Developer Guide
+    url: https://github.com/CassiaLin/Arkham-TW-Localization/blob/main/docs/DEVELOPER_GUIDE.md
+    about: 查閱 Developer Mode 開發者工作流程與資料格式說明

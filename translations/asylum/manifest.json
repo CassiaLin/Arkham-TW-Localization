@@ -1,0 +1,16 @@
+{
+  "pack_format_version": "1.0",
+  "extractor_version": "m1-v1",
+  "game": "asylum",
+  "hash_algorithm": "sha256",
+  "encoding": "utf-8",
+  "normalization": "raw_exact",
+  "entry_count": 6141,
+  "auxiliary_counts": {},
+  "files": {
+    "zh_tw.jsonl": {
+      "sha256": "87ef454a2a12058cee09b71adf7ecf855f70bfad64b6e09c2d95966f01ea9246",
+      "bytes": 1818162
+    }
+  }
+}

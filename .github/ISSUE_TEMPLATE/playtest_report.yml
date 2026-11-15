@@ -1,0 +1,30 @@
+name: Playtest Report
+description: 回報實機遊玩驗收結果（字幕、字庫、過場動畫與 UI 顯示）
+title: "[Playtest]: "
+labels: ["playtest"]
+body:
+  - type: dropdown
+    id: game
+    attributes:
+      label: 測試遊戲
+      options:
+        - Batman: Arkham Asylum GOTY
+        - Batman: Arkham City GOTY
+        - Batman: Arkham Origins
+        - Batman: Arkham Knight
+    validations:
+      required: true
+  - type: input
+    id: resolution
+    attributes:
+      label: 遊戲解析度與顯示設定
+      placeholder: "例如：3840x2160 (4K) / 全螢幕"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 實機測試章節與觀察結果
+      description: 請說明測試進度、字幕大小與行距、是否出現缺字（方塊）或過場動畫字幕問題。
+    validations:
+      required: true

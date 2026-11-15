@@ -1,0 +1,37 @@
+{
+  "pack_format_version": "1.0",
+  "extractor_version": "m1-v1",
+  "game": "knight",
+  "hash_algorithm": "sha256",
+  "encoding": "utf-8",
+  "normalization": "raw_exact",
+  "entry_count": 10201,
+  "auxiliary_counts": {
+    "usm_sha256_zh.json": 77,
+    "ak_en_sha256_zh.json": 32737,
+    "ak_events_zh.json": 42532,
+    "upk_list.json": 1933
+  },
+  "files": {
+    "zh_tw.jsonl": {
+      "sha256": "a75aafb71849b3ae0af48c5bb208adcc25de63d1dc3dd35596e8a6e4722ccedf",
+      "bytes": 2907581
+    },
+    "usm_sha256_zh.json": {
+      "sha256": "397270af52aee04212a9ca637dae782b3bdffd786430a13deb63280de250a7aa",
+      "bytes": 10058
+    },
+    "ak_en_sha256_zh.json": {
+      "sha256": "c45ec241b77b6786e48cf28b60f3022e9ca4ded597fef51f0326609bc6411f48",
+      "bytes": 4190934
+    },
+    "ak_events_zh.json": {
+      "sha256": "d982e539d2c01d91b99f53194e523723f365d7cfbf95b7a768b40c5011d6dddf",
+      "bytes": 6404113
+    },
+    "upk_list.json": {
+      "sha256": "e567fc2b022f8eaa7ff59bc0b7c0807d216fde7f6dc0891ddf677d590f48e63b",
+      "bytes": 83787
+    }
+  }
+}

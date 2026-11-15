@@ -1,0 +1,23 @@
+name: Translation Feedback
+description: 回報錯字、術語不一致、控制碼異常或語氣改善建議
+title: "[Translation]: "
+labels: ["translation"]
+body:
+  - type: dropdown
+    id: game
+    attributes:
+      label: 遊戲作品
+      options:
+        - Batman: Arkham Asylum GOTY
+        - Batman: Arkham City GOTY
+        - Batman: Arkham Origins
+        - Batman: Arkham Knight
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 問題描述與建議譯文
+      description: 請說明出現的章節／對話情境、目前看到的繁中字幕與建議修正方式。
+    validations:
+      required: true

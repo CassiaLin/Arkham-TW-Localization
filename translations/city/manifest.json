@@ -1,0 +1,22 @@
+{
+  "pack_format_version": "1.0",
+  "extractor_version": "m1-v1",
+  "game": "city",
+  "hash_algorithm": "sha256",
+  "encoding": "utf-8",
+  "normalization": "raw_exact",
+  "entry_count": 13167,
+  "auxiliary_counts": {
+    "usm_sha256_zh.json": 429
+  },
+  "files": {
+    "zh_tw.jsonl": {
+      "sha256": "facdb5b79a217713aae839d827f4558f63f5aa6f729b386c8ee2e5a14632bccd",
+      "bytes": 3967710
+    },
+    "usm_sha256_zh.json": {
+      "sha256": "be4907e976b938c3ce9533831faea964d55af81c208229ece4267a1e2150c187",
+      "bytes": 52178
+    }
+  }
+}

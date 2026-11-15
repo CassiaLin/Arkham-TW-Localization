@@ -1,0 +1,32 @@
+{
+  "pack_format_version": "1.0",
+  "extractor_version": "m1-v1",
+  "game": "origins",
+  "hash_algorithm": "sha256",
+  "encoding": "utf-8",
+  "normalization": "raw_exact",
+  "entry_count": 40651,
+  "auxiliary_counts": {
+    "usm_sha256_zh.json": 379,
+    "upk_extra_sha256_zh.json": 240,
+    "upk_list.json": 651
+  },
+  "files": {
+    "zh_tw.jsonl": {
+      "sha256": "3c2c2b47c275d26ce5e3b6a80aba40ce3dc6cac21cc76328e9500e8ea00533d9",
+      "bytes": 11742215
+    },
+    "usm_sha256_zh.json": {
+      "sha256": "7ea91a714ac7a6aaf31f81135471d1c7649cd728bb95eb50f2c1706b981eda27",
+      "bytes": 46796
+    },
+    "upk_extra_sha256_zh.json": {
+      "sha256": "720c356fcc342806dcf9c12d9f6245f0d1205f62fca15d3c582ad1e2d273941a",
+      "bytes": 28413
+    },
+    "upk_list.json": {
+      "sha256": "186680979038e3d760aff19506bef0f49fae4eee376e7851e6bd5a165db36899",
+      "bytes": 40879
+    }
+  }
+}

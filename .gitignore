@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Local player/developer runtime workspaces, configs, backups, and builds
+workspace/
+config/
+dist/
+scratch/
+_Backup_TW_Mod/
+
+# Copyrighted game binaries & assets
+*.exe
+*.upk
+*.usm
+*.u
+*.bik
+*.dll
+*.pak
+*.bak
+
+# Credentials & local environment
+.env
+.env.*
+*.key
+*.pem
