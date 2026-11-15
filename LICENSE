@@ -21,6 +21,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ------------------------------------------------------------------------
+License scope: The MIT license above applies only to original project code,
+installer scripts, tests, and original technical documentation. Game-derived
+translation data, game-related terminology and other third-party content are
+excluded from the MIT license. See docs/TRANSLATION_NOTICE.md. No license to
+third-party copyrighted works is granted by this notice.
+
 Third-Party Assets & Game Copyright Notice:
 "Batman: Arkham Asylum", "Batman: Arkham City", "Batman: Arkham Origins",
 "Batman: Arkham Knight", and all original game binaries, audio, video,

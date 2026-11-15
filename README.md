@@ -1,6 +1,6 @@
 # Batman: Arkham Series — Taiwan Traditional Chinese Localization (台灣繁體中文化)
 
-本專案提供 **Batman: Arkham** 四部曲（瘋人院 / 城市 / 起源 / 騎士）的台灣繁體中文化工具鏈與純中文譯文包。
+本專案提供 **Batman: Arkham** 四部曲（瘋人院 / 城市 / 始源 / 騎士）的台灣繁體中文化工具鏈與純中文譯文包。
 公開發布版本**不包含任何遊戲英文原文或原版／修改後遊戲二進位檔案**，所有中文化資源均於玩家本機端由合法 Steam 原版遊戲即時提取、比對指紋並重建安裝。
 
 > [!NOTE]
@@ -10,18 +10,21 @@
 
 ## Player Mode（一般玩家使用方式）
 
+請從 [GitHub Releases](https://github.com/CassiaLin/Arkham-TW-Localization/releases) 下載最新公開測試版 ZIP，解壓縮至獨立資料夾。首次安裝前請確認遊戲已安裝且關閉，建議使用未套用其他中文化補丁的原版遊戲。
+
+
 ### 系統需求
 - **作業系統**：Windows 10 / 11（64 位元）
 - **遊戲版本**：合法 Steam 正版遊戲（支援 `asylum`、`city`、`origins`、`knight`）
 - **Python 環境**：Python 3.10 以上，並安裝相依套件：
   ```bash
-  pip install -r requirements.txt
+  python -m pip install -r requirements.txt
   ```
 - **不需要任何 AI API Key 或私人開發資料**。
 
 ### 安裝與操作
 
-1. **圖形選單入口（推薦）**：直接雙擊執行 [Install_TW_Mod.bat](Install_TW_Mod.bat)，依中文選單選擇安裝單一遊戲、全部已偵測遊戲、更新譯文包或解除安裝。
+1. **中文文字選單入口（推薦）**：直接雙擊執行 [Install_TW_Mod.bat](Install_TW_Mod.bat)，依中文選單選擇安裝單一遊戲、全部已偵測遊戲、更新譯文包或解除安裝。
 2. **CLI 指令入口**：
    ```bash
    # 查看 Steam 遊戲偵測、Mod 狀態與 Translation Pack 狀態
@@ -42,8 +45,8 @@
 - `player install asylum` 建置時會自動對 `ShippingPC-BmGame.exe` 套用 **60px 字幕行距補丁**（修正 4K/高解析度下雙行字幕上下重疊問題），並在安裝時備份原版 EXE 與 INI 設定。
 
 ### Steam 更新、備份衝突與完整性驗證指引
-- **Steam 遊戲更新後**：若遊戲執行檔或資源曾被 Steam 更新，安裝／還原引擎會偵測到外部修改並**安全中止**，不會以舊版備份覆蓋新版檔案。請先在 Steam 執行「驗證遊戲檔案的完整性」，再重新執行 `player install`。
-- **備份損毀或未完成交易**：若 `_Backup_TW_Mod/manifest.json` 遺失、雜湊不符或前次安裝遭強制中斷，程式會安全中止並提示復原指令（`uninstall` 或重新 `install` 復原快照）。
+- **Steam 遊戲更新後**：若遊戲執行檔或資源曾被 Steam 更新，安裝／還原引擎會偵測到外部修改並**安全中止**，不會以舊版備份覆蓋新版檔案。請先保留備份，在 Steam 執行「驗證遊戲檔案的完整性」，若仍有備份或版本衝突，請回報 Issue，勿直接使用 `--force` 或刪除備份。
+- **備份損毀或未完成交易**：若 `_Backup_TW_Mod/manifest.json` 遺失、雜湊不符或前次安裝遭強制中斷，程式會安全中止並提示復原指令（優先依錯誤提示使用既有 `uninstall` 復原流程；備份損毀時先回報 Issue，不要強制覆蓋）。
 
 ---
 
@@ -74,7 +77,7 @@ python arkham_mod_cli.py dev export <game|all>  # 匯出純中文 Translation Pa
 ## 實機畫面與驗收狀態
 
 > [!IMPORTANT]
-> 目前已完成四部曲（70,160 筆主譯文與全部輔助資源）之乾淨公開目錄本地提取、指紋匹配、Player QA 與 M5 建置驗證；四部曲完整遊戲內通關實機驗收仍待補充。實機截圖將於完成通關驗收後補齊（本文件保留截圖位置，不使用其他畫面代替）。
+> 目前已完成四部曲（70,160 筆主譯文與全部輔助資源）之乾淨公開目錄本地提取、指紋匹配、Player QA 與 M5 建置驗證；四部遊戲均已完成開發者初步實機測試，完整通關實機驗收仍待補充。實機截圖將於完成通關驗收後補齊（本文件保留截圖位置，不使用其他畫面代替）。
 
 <!-- 實機截圖預留位置：
 ![Asylum 實機截圖](docs/screenshots/asylum_placeholder.png)
@@ -85,7 +88,11 @@ python arkham_mod_cli.py dev export <game|all>  # 匯出純中文 Translation Pa
 
 ---
 
+## 問題回報
+
+歡迎透過 [GitHub Issues](https://github.com/CassiaLin/Arkham-TW-Localization/issues) 回報安裝問題、翻譯勘誤及實機測試成果。請提供遊戲名稱、版本與問題場景；勿上傳完整遊戲資源或個人敏感資料。
+
 ## 授權與免責聲明
 
-- 本儲存庫之程式碼與原創繁體中文譯文授權條款請見 [LICENSE](LICENSE)。
+- 自行開發的程式碼、安裝器、測試及技術文件採用 [MIT License](LICENSE)。遊戲譯文及第三方著作不適用 MIT，詳見 [翻譯資料與第三方權利聲明](docs/TRANSLATION_NOTICE.md)。
 - *Batman: Arkham Asylum*、*Batman: Arkham City*、*Batman: Arkham Origins*、*Batman: Arkham Knight* 之遊戲名稱、原始資源與商標權均屬 Warner Bros. Entertainment Inc.、DC Comics 及原開發商所有。本專案僅提供非營利社群中文化工具與純中文譯文包。
